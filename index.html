@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wed đếm ngày đến Tết của Võ Đạt 205 </title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(90deg, #ff7eb3, #ff758c, #42a5f5, #7e57c2);
+      background-size: 400% 400%;
+      animation: gradientBackground 6s infinite;
+      position: relative; /* Để đặt ký tự bản quyền ở góc phải */
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Hiệu ứng typing animation */
+    .typing {
+      font-size: 36px;
+      font-weight: bold;
+      color: white;
+      border-right: 3px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: typing 4s steps(20, end), blink 0.6s step-end infinite;
+    }
+
+    @keyframes typing {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+
+    @keyframes blink {
+      0% { border-color: transparent; }
+      50% { border-color: white; }
+      100% { border-color: transparent; }
+    }
+
+    /* Hiệu ứng loading */
+    .loading {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .loading-circle {
+      width: 50px;
+      height: 50px;
+      border: 6px solid white;
+      border-top: 6px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .loading-text {
+      margin-top: 10px;
+      font-size: 18px;
+      color: white;
+    }
+
+    /* Ẩn hiển thị */
+    .hidden {
+      display: none;
+    }
+
+    /* Ký tự bản quyền ở góc phải */
+    .copyright {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      font-size: 14px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Phần chào mừng -->
+  <div id="welcome" class="welcome">
+    <h1 class="typing">Chào mừng đến với Website!</h1>
+  </div>
+
+  <!-- Phần loading -->
+  <div id="loading" class="loading">
+    <div class="loading-circle"></div>
+    <p class="loading-text">Đang tải...</p>
+  </div>
+
+  <!-- Ký tự bản quyền -->
+  <div class="copyright"><b><i>
+    &copy; 2024-Võ Đạt 205
+  </div></b></i>
+
+  <script>
+    // Hiển thị loading sau khi hiệu ứng typing chạy xong
+    setTimeout(() => {
+      document.getElementById('welcome').classList.add('hidden'); // Ẩn phần chào mừng
+      document.getElementById('loading').style.display = 'flex'; // Hiển thị loading
+
+      // Chuyển sang trang web sau 5 giây
+      setTimeout(() => {
+        window.location.href = "https://vodatdammecode.github.io/hongtetquatroiroi-main/";
+      }, 2000);
+    }, 5000); // Chờ typing hoàn tất (4 giây)
+  </script>
+</body>
+</html>
